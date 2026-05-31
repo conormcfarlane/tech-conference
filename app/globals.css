@@ -1,26 +1,138 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primative Palette */
+  --neutral-900: #00151D;
+  --neutral-800: #001A24;
+  --neutral-600: #33444A;
+  --neutral-500: #49616A;
+  --neutral-200: #C2C5C2;
+  --neutral-100: #FCEFE8;
+
+  --green-200: #D1FF66;
+
+  --yellow-100: #FFE6BA;
+
+  --red-100: #FEC9C3;
+  --red-300: #FF8080;
+
+  --cyan-100: #B5E9FC;
+
+  --purple-100: #CCC4FD;
+
+  --blue-100: #BBD8FF;
+
+  --background-primary: var(--neutral-900);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+@layer components {
+  .text-preset-1 {
+    font-size: 5rem;
+    line-height: 100%;
+    letter-spacing: -2px;
+    font-weight: 700;
+    font-family: var(--font-chakra-petch), sans-serif;
+  }
+
+  .text-preset-1-mobile {
+    font-size: 2.375rem;
+    line-height: 100%;
+    letter-spacing: -2px;
+    font-weight: 700;
+    font-family: var(--font-chakra-petch), sans-serif;
+  }
+
+  .text-preset-2 {
+    font-size: 2rem;
+    line-height: 120%;
+    letter-spacing: 0px;
+    font-weight: 700;
+    font-family: var(--font-chakra-petch), sans-serif;
+  }
+
+  .text-preset-2-tablet {
+    font-size: 1.75rem;
+    line-height: 110%;
+    letter-spacing: 0px;
+    font-weight: 700;
+    font-family: var(--font-chakra-petch), sans-serif;
+  }
+
+  .text-preset-2-mobile {
+    font-size: 1.5rem;
+    line-height: 110%;
+    letter-spacing: 0px;
+    font-weight: 700;
+    font-family: var(--font-chakra-petch), sans-serif;
+  }
+
+  .text-preset-3 {
+    font-size: 1.5rem;
+    line-height: 130%;
+    letter-spacing: 0px;
+    font-weight: 600;
+    font-family: var(--font-chakra-petch), sans-serif;
+  }
+
+  .text-preset-4 {
+    font-size: 1.25rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+    font-weight: 700;
+    font-family: var(--font-chakra-petch), sans-serif;
+  }
+
+  .text-preset-5 {
+    font-size: 1rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-family: var(--font-jetbrains-mono), monospace;
+  }
+
+  .text-preset-5-bold {
+    font-size: 1rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+    font-weight: 700;
+    font-family: var(--font-jetbrains-mono), monospace;
+  }
+
+  .text-preset-6 {
+    font-size: 0.875rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-family: var(--font-jetbrains-mono), monospace;
+  }
+
+  .text-preset-6-medium {
+    font-size: 0.875rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+    font-weight: 500;
+    font-family: var(--font-jetbrains-mono), monospace;
+  }
+
+  .text-preset-6-extraBold {
+    font-size: 0.875rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+    font-weight: 800;
+    font-family: var(--font-jetbrains-mono), monospace;
+  }
+
+  .text-preset-7 {
+    font-size: 0.75rem;
+    line-height: 140%;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    font-family: var(--font-jetbrains-mono), monospace;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-primary);
 }
