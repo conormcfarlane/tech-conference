@@ -135,4 +135,5 @@
 
 body {
   background-color: var(--background-primary);
+  color: var(--neutral-100);
 }
