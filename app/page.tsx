@@ -1,12 +1,23 @@
 import Navbar from "./components/layout/Navbar"
 import Hero from "./components/features/home/Hero";
+import FeaturedSpeaker from "./components/features/FeaturedSpeaker";
+
+import techConferenceData from "../data/data.json"
 
 export default function Home() {
+  const conference = techConferenceData.conference;
+  const speakers = techConferenceData.speakers;
+  const tracks = techConferenceData.tracks;
+  const talks = techConferenceData.talks;
   return (
-    <div className="mx-4 lg:mx-10">
-      <Navbar/>
+    <div className="mx-4 lg:mx-10 overflow-hidden">
+      <Navbar />
       <main>
-      <Hero/>
+        <div className="lg:grid lg:grid-cols-[55%_45%] lg:gap-8">
+          <Hero />
+          <FeaturedSpeaker speakers={speakers} talks={talks} />
+        </div>
+
       </main>
     </div>
   );

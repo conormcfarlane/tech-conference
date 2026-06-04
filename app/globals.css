@@ -39,7 +39,7 @@
 
   @media(min-width:640px) {
     .text-preset-hero {
-      font-size: 5rem;
+      font-size: 3rem;
     }
   }
 
@@ -151,4 +151,13 @@
 body {
   background-color: var(--background-primary);
   color: var(--neutral-100);
+}
+button{
+  cursor: pointer;
+}
+
+.border-shadow {
+  border: 1px solid;
+  box-shadow: 2px 2px;
+
 }
