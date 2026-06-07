@@ -39,7 +39,7 @@
 
   @media(min-width:640px) {
     .text-preset-hero {
-      font-size: 3rem;
+      font-size: 5rem;
     }
   }
 
@@ -152,7 +152,8 @@ body {
   background-color: var(--background-primary);
   color: var(--neutral-100);
 }
-button{
+
+button {
   cursor: pointer;
 }
 

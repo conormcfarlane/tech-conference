@@ -10,10 +10,10 @@ export default function Home() {
   const tracks = techConferenceData.tracks;
   const talks = techConferenceData.talks;
   return (
-    <div className="mx-4 lg:mx-10 overflow-hidden">
+    <div className="mx-4 min-[1300px]:mx-10 overflow-hidden">
       <Navbar />
       <main>
-        <div className="lg:grid lg:grid-cols-[55%_45%] lg:gap-8">
+        <div className="min-[1300px]:grid min-[1300px]:grid-cols-[60%_40%] min-[1300px]:gap-8 " >
           <Hero />
           <FeaturedSpeaker speakers={speakers} talks={talks} />
         </div>
