@@ -13,7 +13,7 @@ export default function Home() {
     <div className="mx-4 min-[1300px]:mx-10 overflow-hidden">
       <Navbar />
       <main>
-        <div className="min-[1300px]:grid min-[1300px]:grid-cols-[60%_40%] min-[1300px]:gap-8 " >
+        <div className="min-[1130px]:grid min-[1130px]:grid-cols-[60%_40%] min-[1130px]:gap-8 " >
           <Hero />
           <FeaturedSpeaker speakers={speakers} talks={talks} />
         </div>
