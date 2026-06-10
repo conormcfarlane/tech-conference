@@ -27,7 +27,7 @@ export default function FeaturedSpeaker({ speakers, talks }: FeaturedSpeakerProp
 
 
     return (
-        <section className='grid grid-cols-1 min-[1130px]:grid-cols-[45%_55%] bg-(--cyan-100) text-(--neutral-900) overflow-visible min-[1130px]:h-full'>
+        <section className='grid grid-cols-1 min-[1130px]:grid-cols-[45%_55%] bg-(--cyan-100) text-(--neutral-900) overflow-hidden min-[1130px]:h-full'>
             <div className='flex flex-col space-y-5 p-6 min-[1300px]:pr-0'>
                 <div>
                     <h2 className='text-preset-6 mb-4'>{"// FEATURED KEYNOTE"}</h2>
@@ -45,9 +45,9 @@ export default function FeaturedSpeaker({ speakers, talks }: FeaturedSpeakerProp
                     <Image src="/images/icon-arrow-right.svg" width={20} height={20} alt='view more button arrow' />
                 </button>
             </div>
-            <div className='relative hidden sm:block overflow-visible'>
-                <div className='absolute right-0 bottom-0 translate-x-1/5 translate-y-1'>
-                    <Image src={avatarUrl} width={400} height={462} alt='Speakers Avatar' className='block h-auto max-w-none' />
+            <div className='relative hidden sm:block'>
+                <div className='absolute right-0 bottom-0 translate-x-1/5 translate-y-2'>
+                    <Image src={avatarUrl} width={400} height={462} alt='Speakers Avatar' className='block h-auto max-w-none ' />
                 </div>
             </div>
 

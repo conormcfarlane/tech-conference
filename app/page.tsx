@@ -1,8 +1,10 @@
 import Navbar from "./components/layout/Navbar"
 import Hero from "./components/features/home/Hero";
-import FeaturedSpeaker from "./components/features/FeaturedSpeaker";
+import FeaturedSpeaker from "./components/features/home/FeaturedSpeaker";
 
 import techConferenceData from "../data/data.json"
+import Tracks from "./components/features/home/Tracks";
+import FeaturedSpeakersList from "./components/features/home/FeaturedSpeakersList";
 
 export default function Home() {
   const conference = techConferenceData.conference;
@@ -12,12 +14,13 @@ export default function Home() {
   return (
     <div className="mx-4 min-[1300px]:mx-10 overflow-hidden">
       <Navbar />
-      <main>
-        <div className="min-[1130px]:grid min-[1130px]:grid-cols-[60%_40%] min-[1130px]:gap-8 " >
+      <main className="space-y-11">
+        <div className="grid gap-6 min-[1130px]:grid min-[1130px]:grid-cols-[60%_40%] min-[1130px]:gap-8 " >
           <Hero />
           <FeaturedSpeaker speakers={speakers} talks={talks} />
         </div>
-
+        <Tracks tracks={tracks} />
+        <FeaturedSpeakersList speakers={speakers} />
       </main>
     </div>
   );
