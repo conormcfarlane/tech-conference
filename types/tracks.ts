@@ -1,4 +1,4 @@
-export interface Tracks {
+export interface Track {
     id: string
     name: string
     description: string

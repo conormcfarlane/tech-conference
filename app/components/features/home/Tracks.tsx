@@ -1,6 +1,6 @@
-import type { Tracks } from "@/types/tracks"
+import type { Track } from "@/types/tracks"
 type TrackProps = {
-    tracks: Tracks[];
+    tracks: Track[];
 }
 export default function Tracks({ tracks }: TrackProps) {
     const visibleTracks = tracks.filter((track) => track.id !== "tr_0");
@@ -11,7 +11,7 @@ export default function Tracks({ tracks }: TrackProps) {
             <div className="grid gap-5 md:grid-cols-2 px-1">
                 {visibleTracks.map((track) => (
                     <div key={track.id} className="px-5 py-4 border border-shadow">
-                        <p style={{color:track.color}} className="text-preset-3 mb-1.5">{track.name.toLowerCase()}</p>
+                        <p style={{ color: track.color }} className="text-preset-3 mb-1.5">{track.name.toLowerCase()}</p>
                         <p className="text-preset-6-medium max-w-[20ch] text-(--neutral-200)">{track.description.toUpperCase()}</p>
                     </div>
                 ))}

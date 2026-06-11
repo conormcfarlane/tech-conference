@@ -1,4 +1,4 @@
-export interface Talks {
+export interface Talk {
     id: string
     title: string
     speakerId: string

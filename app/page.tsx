@@ -1,7 +1,6 @@
 import Navbar from "./components/layout/Navbar"
 import Hero from "./components/features/home/Hero";
 import FeaturedSpeaker from "./components/features/home/FeaturedSpeaker";
-
 import techConferenceData from "../data/data.json"
 import Tracks from "./components/features/home/Tracks";
 import FeaturedSpeakersList from "./components/features/home/FeaturedSpeakersList";
@@ -20,7 +19,7 @@ export default function Home() {
           <FeaturedSpeaker speakers={speakers} talks={talks} />
         </div>
         <Tracks tracks={tracks} />
-        <FeaturedSpeakersList speakers={speakers} />
+        <FeaturedSpeakersList speakers={speakers} talks={talks} tracks={tracks} />
       </main>
     </div>
   );
