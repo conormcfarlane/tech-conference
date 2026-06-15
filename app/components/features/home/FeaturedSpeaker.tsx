@@ -1,11 +1,11 @@
 import React from 'react'
 import { Speaker } from '@/types/speaker'
-import { Talks } from '@/types/talks';
+import { Talk } from '@/types/talks';
 import Image from 'next/image';
 
 type FeaturedSpeakerProps = {
     speakers: Speaker[] | null;
-    talks: Talks[];
+    talks: Talk[];
 }
 
 export default function FeaturedSpeaker({ speakers, talks }: FeaturedSpeakerProps) {
@@ -50,8 +50,6 @@ export default function FeaturedSpeaker({ speakers, talks }: FeaturedSpeakerProp
                     <Image src={avatarUrl} width={400} height={462} alt='Speakers Avatar' className='block h-auto max-w-none ' />
                 </div>
             </div>
-
-
         </section>
     )
 }

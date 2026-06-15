@@ -4,6 +4,7 @@ import type { Track } from '@/types/tracks'
 import type { Talk } from '@/types/talks'
 import Image from 'next/image'
 import { ImageUrlHelper } from '@/utils/ImageHelper'
+import ButtonMain from '../../ui/ButtonMain'
 
 
 type FeaturedSpeakersListProps = {
@@ -33,7 +34,7 @@ export default function FeaturedSpeakersList({ speakers, talks, tracks }: Featur
     });
 
     return (
-        <section>
+        <section className='flex flex-col justify-center'>
             <p className="text-preset-6-extraBold text-(--green-200) mb-5 min-[1130px]:mb-8">{"// FEATURED SPEAKERS"}</p>
             <div className='grid md:grid-cols-2 gap-5 xl:grid-cols-4'>
                 {featuredSpeakersWithColor.map((speaker) => {
@@ -41,18 +42,19 @@ export default function FeaturedSpeakersList({ speakers, talks, tracks }: Featur
                     return (
                         <div key={speaker.id} className='flex flex-col'>
                             <div style={{ backgroundColor: speaker.backgroundColor }} ><Image src={imagepath} width={318} height={250} alt="avatar" className='overflow-hidden h-60 mx-auto' /></div>
-                            <div className='flex flex-col justify-between h-full p-4'>
-                                <div className=' pb-3'>
+                            <div className='flex flex-col justify-between p-4'>
+                                <div className='h-20 border-b border-b-(--neutral-600) pb-3'>
                                     <p className='text-preset-3'>{speaker.name.toLowerCase()}</p>
                                     <p className='text-preset-6-medium text-(--neutral-200)' >{speaker.role.toUpperCase()} @ {speaker.company.toUpperCase()}</p>
                                 </div>
-                                <div><p className='text-preset-6-medium text-(--green-200) border-t border-t-(--neutral-600) pt-3'>{speaker.talkName.toUpperCase()}</p></div>
+                                <div><p className='text-preset-6-medium text-(--green-200) pt-4 '>{speaker.talkName.toUpperCase()}</p></div>
                             </div>
                         </div>
                     )
 
                 })}
             </div>
+            <ButtonMain href='/speaker' className='px-6 py-4 w-[221px] mx-auto text-preset-5-bold bg-(--green-200) text-(--neutral-900) sm:bg-(--neutral-900) sm:text-(--neutral-100)' >VIEW ALL SPEAKERS</ButtonMain>
         </section>
     )
 }
