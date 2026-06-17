@@ -54,7 +54,7 @@ export default function FeaturedSpeakersList({ speakers, talks, tracks }: Featur
 
                 })}
             </div>
-            <ButtonMain href='/speaker' className='px-6 py-4 w-[221px] mx-auto text-preset-5-bold bg-(--green-200) text-(--neutral-900) sm:bg-(--neutral-900) sm:text-(--neutral-100)' >VIEW ALL SPEAKERS</ButtonMain>
+            <ButtonMain href='/speaker' className='px-6 py-4 w-55.25 mx-auto text-preset-5-bold bg-(--green-200) text-(--neutral-900) sm:bg-(--neutral-900) sm:text-(--neutral-100)' >VIEW ALL SPEAKERS</ButtonMain>
         </section>
     )
 }

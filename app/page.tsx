@@ -4,6 +4,7 @@ import FeaturedSpeaker from "./components/features/home/FeaturedSpeaker";
 import techConferenceData from "../data/data.json"
 import Tracks from "./components/features/home/Tracks";
 import FeaturedSpeakersList from "./components/features/home/FeaturedSpeakersList";
+import ScheduleHighlights from "./components/features/home/ScheduleHighlights";
 
 export default function Home() {
   const conference = techConferenceData.conference;
@@ -20,6 +21,7 @@ export default function Home() {
         </div>
         <Tracks tracks={tracks} />
         <FeaturedSpeakersList speakers={speakers} talks={talks} tracks={tracks} />
+        <ScheduleHighlights talks={talks} speakers={speakers} tracks={tracks} />
       </main>
     </div>
   );
