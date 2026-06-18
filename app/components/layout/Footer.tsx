@@ -50,7 +50,7 @@ export default function Footer() {
             {/* FOOTER CONTAINER */}
             <div className='flex flex-col border-y border-(--neutral-600) py-8 min-[1130px]:flex-row min-[1130px]:justify-between '>
                 {/* FOOTER INFO */}
-                <div className='space-y-4 mb-5 sm:max-w-[45ch]'>
+                <div className='space-y-4 mb-5 min-[1130px]:max-w-[45ch]'>
                     <Image src="/images/logo.svg" width={190} height={31} alt='devhorizon logo' />
                     <p className='text-preset-6 text-(--neutral-200)'>A three-day conference for engineers who build the intrfaces humans use every day</p>
                 </div>

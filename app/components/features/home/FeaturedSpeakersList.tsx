@@ -2,9 +2,8 @@ import React from 'react'
 import type { Speaker } from '@/types/speaker'
 import type { Track } from '@/types/tracks'
 import type { Talk } from '@/types/talks'
-import Image from 'next/image'
-import { ImageUrlHelper } from '@/utils/ImageHelper'
 import ButtonMain from '../../ui/ButtonMain'
+import SpeakerCard from '../shared/SpeakerCard'
 
 
 type FeaturedSpeakersListProps = {
@@ -13,9 +12,7 @@ type FeaturedSpeakersListProps = {
     tracks: Track[];
 }
 export default function FeaturedSpeakersList({ speakers, talks, tracks }: FeaturedSpeakersListProps) {
-
     const featuredSpeakers = speakers.filter((speaker) => speaker.featured == true)
-    // TRACK.ID + TRACK.COLOUR
     const trackColorById = new Map(tracks.map((track) => [track.id, track.color]));
     const talkBySpeakerId = new Map(
         talks.map((talk) => [talk.speakerId, talk])
@@ -41,29 +38,19 @@ export default function FeaturedSpeakersList({ speakers, talks, tracks }: Featur
             {/* GRID CONTAINER */}
             <div className='grid md:grid-cols-2 gap-5 xl:grid-cols-4'>
                 {featuredSpeakersWithColor.map((speaker) => {
-                    const imagepath = ImageUrlHelper(speaker.avatar);
                     return (
-                        // INDIVIDUAL CONTAINER
-                        <div key={speaker.id} className='flex flex-col'>
-                            {/* IMAGE CONTAINER */}
-                            <div style={{ backgroundColor: speaker.backgroundColor }} ><Image src={imagepath} width={318} height={250} alt="avatar" className='overflow-hidden h-60 mx-auto' /></div>
-                            {/* INFO CONTENT CONTAINER */}
-                            <div className='flex flex-col justify-between p-4'>
-                                {/* SPEAKER + ROLE + COMPANY  */}
-                                <div className='h-20 border-b border-b-(--neutral-600) pb-3'>
-                                    <p className='text-preset-3'>{speaker.name.toLowerCase()}</p>
-                                    <p className='text-preset-6-medium text-(--neutral-200)' >{speaker.role.toUpperCase()} @ {speaker.company.toUpperCase()}</p>
-                                </div>
-                                {/* TALK NAME */}
-                                <div><p className='text-preset-6-medium text-(--green-200) pt-4 '>{speaker.talkName.toUpperCase()}</p></div>
-                            </div>
-                        </div>
+                        <SpeakerCard
+                            key={speaker.id}
+                            speaker={speaker}
+                            talkName={speaker.talkName}
+                            backgroundColor={speaker.backgroundColor}
+                        />
                     )
 
                 })}
             </div>
             {/* VIEW ALL SPEAKERS BUTTON */}
-            <ButtonMain href='/speaker' className='px-6 py-4 w-55.25 mx-auto text-preset-5-bold bg-(--green-200) text-(--neutral-900) sm:bg-(--neutral-900) sm:text-(--neutral-100)' >VIEW ALL SPEAKERS</ButtonMain>
+            <ButtonMain href='/speakers' className='px-6 py-4 w-55.25 mx-auto text-preset-5-bold bg-(--green-200) text-(--neutral-900) sm:bg-(--neutral-900) sm:text-(--neutral-100)' >VIEW ALL SPEAKERS</ButtonMain>
         </section>
     )
 }
