@@ -32,7 +32,7 @@ export default function FeaturedSpeaker({ speakers, talks }: FeaturedSpeakerProp
                 <div>
                     <h2 className='text-preset-6 mb-4'>{"// FEATURED KEYNOTE"}</h2>
 
-                    <p className='text-preset-2 mb-2'>{featuredSpeaker?.name.toLocaleLowerCase()}</p>
+                    <p className='text-preset-2-responsive mb-2'>{featuredSpeaker?.name.toLocaleLowerCase()}</p>
                     <p className='text-preset-6-medium'>{featuredSpeaker?.role.toLocaleUpperCase()}</p>
                     <p className='text-preset-6-medium'>{featuredSpeaker?.company.toLocaleUpperCase()}</p>
                 </div>

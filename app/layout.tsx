@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { chakraPetch, jetBrains } from "./fonts";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Tech Conference App",
@@ -17,7 +19,13 @@ export default function RootLayout({
       lang="en"
       className={`${jetBrains.variable} ${chakraPetch.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body id="top" className="min-h-full flex flex-col">
+        <div className="mx-4 min-[1300px]:mx-10 overflow-hidden">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }

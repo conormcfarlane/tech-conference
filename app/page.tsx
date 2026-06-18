@@ -5,6 +5,7 @@ import techConferenceData from "../data/data.json"
 import Tracks from "./components/features/home/Tracks";
 import FeaturedSpeakersList from "./components/features/home/FeaturedSpeakersList";
 import ScheduleHighlights from "./components/features/home/ScheduleHighlights";
+import Footer from "./components/layout/Footer";
 
 export default function Home() {
   const conference = techConferenceData.conference;
@@ -12,8 +13,7 @@ export default function Home() {
   const tracks = techConferenceData.tracks;
   const talks = techConferenceData.talks;
   return (
-    <div className="mx-4 min-[1300px]:mx-10 overflow-hidden">
-      <Navbar />
+    <div className=" overflow-hidden">
       <main className="space-y-11">
         <div className="grid gap-6 min-[1130px]:grid min-[1130px]:grid-cols-[60%_40%] min-[1130px]:gap-8 " >
           <Hero />
