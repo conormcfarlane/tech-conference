@@ -2,6 +2,7 @@ import React from 'react'
 import { Speaker } from '@/types/speaker'
 import { Talk } from '@/types/talks';
 import Image from 'next/image';
+import ButtonMain from '../../ui/ButtonMain';
 
 type FeaturedSpeakerProps = {
     speakers: Speaker[] | null;
@@ -31,7 +32,6 @@ export default function FeaturedSpeaker({ speakers, talks }: FeaturedSpeakerProp
             <div className='flex flex-col space-y-5 p-6 min-[1300px]:pr-0'>
                 <div>
                     <h2 className='text-preset-6 mb-4'>{"// FEATURED KEYNOTE"}</h2>
-
                     <p className='text-preset-2-responsive mb-2'>{featuredSpeaker?.name.toLocaleLowerCase()}</p>
                     <p className='text-preset-6-medium'>{featuredSpeaker?.role.toLocaleUpperCase()}</p>
                     <p className='text-preset-6-medium'>{featuredSpeaker?.company.toLocaleUpperCase()}</p>
@@ -40,10 +40,10 @@ export default function FeaturedSpeaker({ speakers, talks }: FeaturedSpeakerProp
                     <p className='text-preset-5-bold mb-2'>{featuredSpeakersTalk?.title.toLocaleUpperCase()}</p>
                     <p className='text-preset-6-medium'>{talkDate} / {featuredSpeakersTalk?.startTime} / {featuredSpeakersTalk?.location.toLocaleUpperCase()}</p>
                 </div>
-                <button className='flex mt-auto border-shadow px-6 py-4 w-fit whitespace-nowrap'>
-                    <p className='text-preset-5-bold'>View Talk</p>
+                <ButtonMain href='/schedule' className='flex items-center gap-2 mt-auto px-6 py-4 w-fit whitespace-nowrap'>
+                    <span className='text-preset-5-bold'>View Talk</span>
                     <Image src="/images/icon-arrow-right.svg" width={20} height={20} alt='view more button arrow' />
-                </button>
+                </ButtonMain>
             </div>
             <div className='relative hidden sm:block'>
                 <div className='absolute right-0 bottom-0 translate-x-1/5 translate-y-2'>

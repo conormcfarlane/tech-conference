@@ -46,7 +46,7 @@ export default function Navbar() {
 
             </div>
             {isMenuOpen && (
-                <ul className='flex flex-col gap-4'>
+                <ul className='flex flex-col gap-4 mb-4'>
                     {NavItems.map((item: NavItem) => {
                         return (
                             <li key={item.href} onClick={handleCloseMenu}><Link href={item.href} className='block border p-2.5 text-center text-preset-6-medium'>{item.label}</Link>
