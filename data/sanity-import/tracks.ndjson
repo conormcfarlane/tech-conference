@@ -1,0 +1,5 @@
+{"_id":"track-tr_0","_type":"track","name":"Keynote","description":"Opening and closing sessions","color":"#B5E9FC"}
+{"_id":"track-tr_1","_type":"track","name":"Frontend","description":"Building modern interfaces for the web","color":"#FFE6BA"}
+{"_id":"track-tr_2","_type":"track","name":"Performance","description":"Make every millisecond count","color":"#FEC9C3"}
+{"_id":"track-tr_3","_type":"track","name":"Accessibility","description":"Building inclusive experiences for everyone","color":"#BBD8FF"}
+{"_id":"track-tr_4","_type":"track","name":"Tooling","description":"Level up your developer workflow","color":"#CCC4FD"}
